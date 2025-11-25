@@ -65,3 +65,10 @@ type coercion->concept jis mein aapka ek type automatically convert hojaayega
 "5"-1=4   here - has one operation only subtraction so it converts str to int
 0 false '' null undefined NaN document.all ->falsy values
 */
+
+//Operators in js
+/*+ - * / % ** ->arithmetic operators 
+= == === < > <= >= ! != !== !! && ||
+? :
+instanceof used for checking whether an object is an instance of a parent class or not
+*/
