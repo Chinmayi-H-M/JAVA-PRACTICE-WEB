@@ -143,3 +143,22 @@ for(let i=1;i<=20;i++){
     }
     console.log(i);
 }
+
+
+for(let i=1;i<=50;i++){
+    if(i%3===0){
+        console.log(i);
+    }
+    else{
+        continue;
+    }
+}
+let val=prompt("Give a number:");
+for(let i=1;i<=val;i++){
+    if(i%2===0){
+        console.log(`${i} is even`);
+    }
+    else{
+        console.log(`${i} is odd`);
+    }
+}
