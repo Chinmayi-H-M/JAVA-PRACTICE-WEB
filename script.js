@@ -1,6 +1,6 @@
 //words vs keywords
 //const,let var line by line comparison
-var a=(23*12)+8;
+/*var a=(23*12)+8;
 //declarations and initializations
 var a; //declare 
 a=12; //initialize
@@ -35,7 +35,7 @@ console.log(a);
 var a=12;
 //this will be divided as var a=undefined;//this is goes to top 
 a=12; // thisis another line
-
+*/
 
 //Datatypes in js
 /*
@@ -72,3 +72,74 @@ type coercion->concept jis mein aapka ek type automatically convert hojaayega
 ? :
 instanceof used for checking whether an object is an instance of a parent class or not
 */
+
+function getGrade(score){
+    if (score>=90 &&score<=1000){
+        return "A+";
+    }
+    else if(score>=80 && score<90){
+        return "A";
+    }
+    else if(score>=70 && score<80){
+        return "B+";
+    }
+    else if(score>=60 && score<70){
+        return "B";
+    }
+    else if(score>=50 && score<60){
+        return "C";
+    }
+    else if(score>=40 && score<50){
+        return "D";
+    }
+    else if(score>=30 && score<40){
+        return "E";
+    }
+    else if(score>=0 && score<30){
+        return "F";
+    }
+    else{
+        return "Invalid choice";
+    }
+    
+}
+console.log(getGrade(85));
+
+//ROCK,PPAER SCISSOR
+function rps(user,computer){
+    if (user===computer) return "draw";
+    if (user==="rock" && computer==="scissor") return "user wins";
+    if(user==="rock" && computer==="paper") return "computer wins";
+    if(user==="scissor" && computer==="paper") return "user wins";
+    if(user==="paper" && computer==="rock") return "user wins";
+    if(user==="paper" && computer==="scissor") return "computer wins";
+    if(user==="scissor" && computer==="rock") return "computer wins";
+}
+console.log(rps("rock","paper"));
+
+//repeat karne ko loop kahte hai
+//for loop, while, do-while,forin,for of,for each
+let i=1;
+do{
+    console.log(i);
+    i++;
+}while(i<=10);
+for(let i=1;i<10;i++){
+    if(i%2===0){
+       break;//continue;
+    }
+}
+//Q1
+for(let i=1;i<11;i++){
+    console.log(i);
+}
+//Q2
+for(let i=10;i>=1;i--){
+    console.log(i);
+}
+for(let i=1;i<=20;i++){
+    if(i%2!==0){
+        continue;
+    }
+    console.log(i);
+}
