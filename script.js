@@ -187,3 +187,77 @@ function dance(v1){
 }
 dance("ghoda");
 dance("dog")
+
+//first class functions -> functions ko values ki tarah treat kar
+function abcd(val){
+    val();
+}
+abcd(function(){
+    console.log("hey")
+})
+//higher order functions -wo function hata hai jo ki return kare function ya fir accept kare ek fnc apne parameter mein
+
+function abcd(val){
+
+}
+abcd(function(){
+
+})
+
+//pure and impure functions
+let a=12;
+function abcd(){
+    console.log(a); //pure function
+}
+function efgh(){
+    a++; //impure funtion
+}
+//closures -> one function returns another function, the function which returns most of the time use the varible of the parent
+function abcd(){
+    let a=12;
+    return function(){
+        console.log(a);
+    }
+}
+//lexical scoping
+function abcd(){
+    let a=12;
+    function efgh(){
+        let b=12;
+        function ijkl(){
+            let c=12;
+        }
+    }
+}
+
+//Immediately invok expression 
+(function(){
+    console.log("heyey");
+})();
+//hoisting in functions if we store the function in another variable then try to print it will not means function definition is in 8th line and we are calling in 1st line but when we use direct function and calling it in the 1st line then it is available
+
+
+//Q1 What's the difference between function declarationand expression in terms of hoisting?
+abcd();
+
+
+function abcd(){
+    console.log("hey");
+}
+//this is function declaration and it is hoisted
+let abcd=function(){
+    console.log("hello");
+}
+//this is function expression which is not hoisted 
+function multiply(a,b){
+    return a*b;
+}//convert this to arrow function
+let multiply =(a,b)=>{
+    return a*b;
+}
+//What does the ... operator mean in parameters?
+//It is a rest operator which is used to represent multiple arguments as an array
+function sum(...args){
+    let total=0;
+}
+sum(1,2,3,4,5);
