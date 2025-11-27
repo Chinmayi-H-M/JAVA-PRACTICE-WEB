@@ -73,7 +73,7 @@ type coercion->concept jis mein aapka ek type automatically convert hojaayega
 instanceof used for checking whether an object is an instance of a parent class or not
 */
 
-function getGrade(score){
+/*function getGrade(score){
     if (score>=90 &&score<=1000){
         return "A+";
     }
@@ -162,3 +162,28 @@ for(let i=1;i<=val;i++){
         console.log(`${i} is odd`);
     }
 }
+
+for(let i=1;i<=100;i++){
+    if(i%3===0){
+        continue;
+    }
+    else{
+        console.log(i);
+    }
+}
+//functions
+function lolo(){
+    console.log("Hello");
+
+}
+lolo();
+
+let fnc=function(){//function declaration
+    console.log("Here variable name is the function name");
+}
+fnc();*/
+function dance(v1){
+    console.log(`${v1} naach raha hai`);
+}
+dance("ghoda");
+dance("dog")
