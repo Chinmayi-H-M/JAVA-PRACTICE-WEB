@@ -261,3 +261,22 @@ function sum(...args){
     let total=0;
 }
 sum(1,2,3,4,5);
+
+//HOF-discount calculator
+function discountCalculator(discount){
+    return function(price){
+        return price-(price*discount)/100;
+    };
+}
+let discounter=discountCalculator(10);
+console.log(discounter(500));
+
+function counter(){
+    let count = 0;
+    return function(){
+        count ++;
+        return count;
+    }
+}
+ let c=counter();
+ console.log(c());
