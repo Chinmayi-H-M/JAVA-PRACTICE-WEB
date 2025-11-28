@@ -280,3 +280,21 @@ function counter(){
 }
  let c=counter();
  console.log(c());
+
+ (function(){
+    const password="secret password";
+    console.log(password);
+ })();
+
+ console.log(password);//error password cannot be accessed from outside IIFE
+
+ //Arrays in js
+ let arr=[];
+ let arr1=new Array();
+ let arr2=[1,2,3,4,5];
+ arr2.push(6);
+ arr2.pop();
+ arr2.shift();//first is deklted 
+ arr2.unshift(2); //adds at the first
+ arr2.splice(2,1);
+
