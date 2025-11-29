@@ -182,7 +182,7 @@ let fnc=function(){//function declaration
     console.log("Here variable name is the function name");
 }
 fnc();*/
-function dance(v1){
+/*function dance(v1){
     console.log(`${v1} naach raha hai`);
 }
 dance("ghoda");
@@ -342,6 +342,18 @@ let [q,b, ,d] =arra;
 
 let even=[2,4,6,8,10];
 let arr5=[...even];//spread operator
+
+let color = ["Green","Red"];
+colors.splice(1,0,"Yellow","Blue");
+let names=["Zara","Arjun","Mohan"];
+names.sort();8*/
+
+//mrging 2 arrays using spread operator
+let a1=[1,2,3];
+let a2=[4,5,6];
+let ma=[...a1,...a2];
+
+
 
 
 
