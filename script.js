@@ -349,7 +349,7 @@ let names=["Zara","Arjun","Mohan"];
 names.sort();8*/
 
 //mrging 2 arrays using spread operator
-let a1=[1,2,3];
+/*let a1=[1,2,3];
 let a2=[4,5,6];
 let ma=[...a1,...a2];
 
@@ -365,7 +365,76 @@ obj["age"];
 
 aa="name";
 obj.aa; //undefined
-obj[aa]; //"Harsh"
+obj[aa]; //"Harsh"*/
+
+let  obj={
+    name:"chinmayi",
+    city:{
+        state:"karnataka",
+        taluk:"k r pete",
+        district:"mandya",
+    },
+};
+let {taluk,district}=obj.city;
+
+let obj1={
+    name:"chinmayi",
+    age:20,
+    email:"hmschinmayi06@gmail.com",
+};
+for(let key in obj1){
+    console.log(key,obj1[key]);
+}
+Object.keys(obj1)
+Object.entries(obj1)
+let obj2=Object.assign({price:"infinity"},obj1);
+
+let s={
+    name:"Sharan",
+    age:20,
+    email:"sm955659@gmail.com",
+    address:{
+        state:"karnataka",
+        city:"Koppal",
+    },
+};
+
+let obj3=JSON.parse(JSON.stringify(s));//deep copy
+obj3.address.city="Gadag";
+console.log(s)
+
+let role="admin";
+let s2={
+    name:"Sharan",
+    age:20,
+    email:"sm955659@gmail.com",
+    address:{
+        state:"karnataka",
+        city:"Koppal",
+    },
+    [role]:"SBMC",
+};
+let obj5={...s2};
+obj5.address.city="Mysore";
+
+//Destructure the key "first-name" as a variable called firstname
+const user={
+    "first-name":"Chinmayi",
+    "last-name":"S M",
+};
+let {"first-name":firstname}=user;
+let {"last-name":lastname}=user;
+
+//Use Object.entries() to print all key-value pairs as:
+//title:JavaScript,duration:4weeks
+const course={
+    title:"Javascript",
+    dusration:"4 weeks",
+};
+Object.entries(course).forEach(function(val){
+    console.log(val[0] + ":" + val[1]);
+})
+
 
 
 
