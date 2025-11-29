@@ -354,6 +354,19 @@ let a2=[4,5,6];
 let ma=[...a1,...a2];
 
 
+//Objects in js
+let obj ={
+    name: "Harsh",
+    age:23,
+    branch:"cse",
+};
+obj.name;
+obj["age"];
+
+aa="name";
+obj.aa; //undefined
+obj[aa]; //"Harsh"
+
 
 
 
