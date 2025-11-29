@@ -297,4 +297,56 @@ function counter(){
  arr2.shift();//first is deklted 
  arr2.unshift(2); //adds at the first
  arr2.splice(2,1);
+arr2.splice(2,1);//changes the original array
+arr2.slice(1,4);//does not change the original array 
+let newArr=arr2.slice(1,4);
+arr.reveese();
+let sr=arr2.sort(function(a,b){
+    return a-b;//ascending order b-a for descendig order
+});
+
+//map,filter,reduce->these three wil accepts function 
+arr.forEach(function(val){
+    console.log(val);
+})
+//Map must be used when we have to create a new array by performing some operation on each element of the original array
+//map dikthe hi saath man mein ek blank array bana liya karo
+
+
+let newArray=arr2.map(function(val){
+    return val*2;
+})
+
+let arr3=arr.filter(function (val){
+    if(val>4) return true;
+})
+
+let sum=arr2.reduce(function(accumulator,val){
+    return accumulator+val;
+},0)
+arr4=({name:"abc",age:23},
+    {name:"def",age:21}
+)
+arr.find(function(val){
+    return val.age==23;
+})
+let any=arr.some(function(val){
+    return val>85;
+});
+let any2=arr.every(function(val){
+    return val>0;
+})
+
+let arra =[1,2,3,4,5];
+let [q,b, ,d] =arra;
+
+let even=[2,4,6,8,10];
+let arr5=[...even];//spread operator
+
+
+
+
+
+
+
 
