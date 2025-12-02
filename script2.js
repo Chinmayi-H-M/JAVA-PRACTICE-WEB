@@ -45,9 +45,13 @@ for(let i=0;i<lis.length;i++){
 let ul=document.querySelector("ul");
 let li=document.createElement("li");
 li.textContent="New Task"
-ul.appendChild(li);
+ul.appendChild(li);*/
 
-document.createElement("img");*/
+let img=document.createElement("img");
+let div=document.querySelector("div");
+img.setAttribute("src","https://assets.architecturaldigest.in/photos/600838c57a5614cb87e4a051/16:9/w_2560%2Cc_limit/Umaid-Bhawan-1366x768.jpg");
+img.classList.add("placeholder");
+div.prepend(img);
 
 
 
