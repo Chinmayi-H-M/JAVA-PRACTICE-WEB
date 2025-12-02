@@ -40,3 +40,6 @@ for(let i=0;i<lis.length;i++){
 
 //textContent and innerText these are almost same ->in this if we write <i> this will print as it is it is not converted to convert it we have to do in innnerHTML
 document.querySelector("p").innerHTML="<b>hey this is part-2 java tutorial</b>"
+let btn=document.querySelector("button");
+btn.removeAttribute("disabled");
+
