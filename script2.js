@@ -18,7 +18,7 @@ a.removeAttribute("href");*/
 // h1.textContent="This is created by JS";
 // document.body.appendChild(h1);
 // h1.remove();
-let h1=document.querySelector("h1");
+/*let h1=document.querySelector("h1");
 h1.textContent="hai my name is chinmayi";
 document.querySelector("div").prepend(h1);
 h1.style.color="red";
@@ -36,10 +36,21 @@ lis.forEach(function(val){
 })
 for(let i=0;i<lis.length;i++){
     console.log(lis[i].textContent);
-}
+}*/
 
 //textContent and innerText these are almost same ->in this if we write <i> this will print as it is it is not converted to convert it we have to do in innnerHTML
-document.querySelector("p").innerHTML="<b>hey this is part-2 java tutorial</b>"
-let btn=document.querySelector("button");
-btn.removeAttribute("disabled");
+//document.querySelector("p").innerHTML="<b>hey this is part-2 java tutorial</b>"
+/*let btn=document.querySelector("button");
+//btn.removeAttribute("disabled");
+let ul=document.querySelector("ul");
+let li=document.createElement("li");
+li.textContent="New Task"
+ul.appendChild(li);
+
+document.createElement("img");*/
+
+
+
+
+
 
