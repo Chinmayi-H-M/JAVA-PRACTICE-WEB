@@ -53,6 +53,28 @@ img.setAttribute("src","https://assets.architecturaldigest.in/photos/600838c57a5
 img.classList.add("placeholder");
 div.prepend(img);
 
+/*let ul=document.querySelector("ul");
+let li=document.querySelector("li");
+ul.removeChild(li);*/
+//to add the backgrouncolor element.style.backgroundcolor="red";
+let ul=document.querySelector("ul");
+let li=document.querySelectorAll("li");
+console.log(li);
+let i=0;
+for(i=0;i<li.length;i++){
+    if(i%2==0){
+        li[i].classList.add("highlight");
+    }
+}
+//for the above another way is 
+let l=document.querySelectorAll("ul li:nth-child(2n)")
+let p=document.querySelectorAll("p")
+p.forEach(element => {
+    element.style.fontSize="20px"; 
+});
+
+
+
 
 
 
