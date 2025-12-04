@@ -35,8 +35,12 @@
             width: 100%;
             height:100%;
         }
-        input{
+        /* input{
             display:none;
+        } */
+         input{
+            display: block;
+            margin:5px;
         }
         #btn{
             padding:12px 22px;
@@ -93,10 +97,18 @@
     </select> -->
     <h1>1</h1>
     <div id="main">
-        <input id="fileinp" type="file">
+        <form action="">
+        <input type="text" placeholder="name">
+        <input type="text" placeholder="email">
+        <input type="text" placeholder="degree">
+        <input type="text" placeholder="phone.no">
+        <input type="text" placeholder="submit">
+    </form>
+        <!-- <input id="fileinp" type="file">
     
-    <div id="btn">Upload file</div>
+    <div id="btn">Upload file</div> -->
     </div>
+    
     <script src="events.js"></script>
     
 </body>
