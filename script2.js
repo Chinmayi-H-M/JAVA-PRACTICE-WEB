@@ -47,17 +47,17 @@ let li=document.createElement("li");
 li.textContent="New Task"
 ul.appendChild(li);*/
 
-let img=document.createElement("img");
+/*let img=document.createElement("img");
 let div=document.querySelector("div");
 img.setAttribute("src","https://assets.architecturaldigest.in/photos/600838c57a5614cb87e4a051/16:9/w_2560%2Cc_limit/Umaid-Bhawan-1366x768.jpg");
 img.classList.add("placeholder");
-div.prepend(img);
+div.prepend(img);*/
 
 /*let ul=document.querySelector("ul");
 let li=document.querySelector("li");
 ul.removeChild(li);*/
 //to add the backgrouncolor element.style.backgroundcolor="red";
-let ul=document.querySelector("ul");
+/*let ul=document.querySelector("ul");
 let li=document.querySelectorAll("li");
 console.log(li);
 let i=0;
@@ -71,7 +71,9 @@ let l=document.querySelectorAll("ul li:nth-child(2n)")
 let p=document.querySelectorAll("p")
 p.forEach(element => {
     element.style.fontSize="20px"; 
-});
+});*/
+
+
 
 
 
