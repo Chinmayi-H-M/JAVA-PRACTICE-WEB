@@ -38,3 +38,14 @@ window.addEventListener("keydown",function(dets){
     }
     console.log(dets.key);
 })
+let btn=document.querySelector("#btn");
+let input=document.querySelector("#fileinp")
+btn.addEventListener("click",function(){
+    input.click();
+})
+input.addEventListener("change",function(dets){
+    console.log(dets.target.files[0].name);
+    btn.textContent=dets.target.files[0].name;
+
+})
+
