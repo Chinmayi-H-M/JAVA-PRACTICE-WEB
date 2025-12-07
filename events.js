@@ -135,4 +135,10 @@ abcd.addEventListener("mouseover", function(){
 abcd.addEventListener("mouseout", function(){
     abcd.style.backgroundColor = "red";
 })
+window.addEventListener("mousemove",function(dets){
+    //console.log(dets.clientX,dets.clientY);
+    abcd.style.top = dets.clientX + "px";
+    abcd.style.left = dets.clientY + "px";
+})
+
 
