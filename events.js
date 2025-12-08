@@ -148,5 +148,10 @@ window.addEventListener("mousemove",function(dets){
 document.querySelector("#nav").addEventListener("click",function(){
     alert("Clicked");
 });
+let ul= document.querySelector("ul");
+ul.addEventListener("click",function(dets){
+    //dets.target.style.textDecoration="line-through";
+    dets.target.classList.toggle("lt");
+});
 
 
