@@ -51,7 +51,7 @@ input.addEventListener("change",function(dets){
        btn.textContent=file.name;
     }
 })*/
-let form = document.querySelector("form");
+/*let form = document.querySelector("form");
 let inputs = document.querySelectorAll("input");
 let main= document.querySelector("#main");
 form.addEventListener("submit",function(dets){
@@ -139,6 +139,12 @@ window.addEventListener("mousemove",function(dets){
     //console.log(dets.clientX,dets.clientY);
     abcd.style.top = dets.clientX + "px";
     abcd.style.left = dets.clientY + "px";
+})*/
+let abcd = document.querySelector("#abcd");
+let form = document.querySelector("form");
+form.addEventListener("submit",function(dets){
+    dets.preventDefault();
 })
+
 
 
