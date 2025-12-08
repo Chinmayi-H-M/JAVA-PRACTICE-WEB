@@ -170,5 +170,23 @@ c.addEventListener("click",function(){
 btn.addEventListener("click",function(){
     console.log("button is clicked");
 })
+//jab bhi aap click karte hp ya koi bhi event raise karte ho to aapka jo event flow do phases mein chalta hai:
+//phase 1: event top level element se neeche ki taraf aayega
+//phase 2: event raised elementseparent ki taraf jaayega
+
+let inp = document.querySelector("input");
+let span = document.querySelector("span");
+inp.addEventListener("input",function(){
+    let left = 20 - inp.value.length;
+    if(left < 0){
+        span.textContent = left;
+        span.style.color = "red";
+    }
+    else{
+        span.textContent = left;
+        span.style.color = "white";
+    }
+
+})
 
 
