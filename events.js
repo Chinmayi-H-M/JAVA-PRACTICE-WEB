@@ -154,4 +154,21 @@ ul.addEventListener("click",function(dets){
     dets.target.classList.toggle("lt");
 });
 
+let a=document.querySelector(".a");
+let b=document.querySelector(".b");
+let c=document.querySelector(".c");
+let btn = document.querySelector("button");
+a.addEventListener("click",function(){
+    console.log("a is clicked");
+})
+b.addEventListener("click",function(){
+    console.log("b is clicked");
+})
+c.addEventListener("click",function(){
+    console.log("c is clicked");
+})
+btn.addEventListener("click",function(){
+    console.log("button is clicked");
+})
+
 
