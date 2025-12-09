@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Download</title>
+    <style>
+        .download-card {
+  width: 300px;
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  font-family: Arial, sans-serif;
+}
+
+.download-card h3 {
+  margin: 0 0 15px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.progress-container {
+  width: 100%;
+  background: #e1e4e8;
+  height: 12px;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.progress-bar {
+  width: 0%;              /* JS will update this */
+  height: 100%;
+  background: #3b82f6;
+  border-radius: 6px;
+  transition: width 0.3s ease;
+}
+
+#progress-text {
+  margin-top: 10px;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+    </style>
+</head>
+
+<body>
+    <div class="download-card">
+  <h3>Downloading...</h3>
+
+  <div class="progress-container">
+    <div class="progress-bar" id="progress-bar"></div>
+  </div>
+
+  <p id="progress-text"></p>
+</div>
+<script src="script1.js"></script>
+    
+</body>
+</html>
