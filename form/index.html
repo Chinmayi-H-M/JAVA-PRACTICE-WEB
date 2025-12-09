@@ -5,33 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Form validation</title>
     <style>
-        small{
-            
-            color:red;
-            font-size:12px;
-        }
+        
         #hide{
             display:none;
+            color:red;
         }
     </style>
 </head>
 <body>
+    <form >
     <input id = "name" type="text" placeholder="name">
-    <br>
+    <br><br>
     <div id = "hide">
+        <br>
+        Your name must be of 2 characters
     </div>
-    <input type="email" placeholder="email">
-    <br>
+    <br><br>
+    <input pattern=[a-z] required minlength="3" maxlength ="10" type="email" placeholder="email">
+    <br><br>
     <input type="password" placeholder="password">
-    <br>
+    <br><br>
     <select>
         <option value="male">Male</option>
         <option value="female">Female</option>
         <option value="others">Others</option>
     </select>
-    <br>
-    <textarea placeholder="Teell us yourself"></textarea>
-    <br>
+    <br><br>
+    <textarea placeholder="Tell us yourself"></textarea>
+    <br><br>
     <input type="submit">
+    </form>
+    <script src="script1.js"></script>
 </body>
 </html>
