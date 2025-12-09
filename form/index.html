@@ -4,10 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Form validation</title>
+    <style>
+        small{
+            
+            color:red;
+            font-size:12px;
+        }
+        #hide{
+            display:none;
+        }
+    </style>
 </head>
 <body>
-    <input type="text" placeholder="name">
+    <input id = "name" type="text" placeholder="name">
     <br>
+    <div id = "hide">
+    </div>
     <input type="email" placeholder="email">
     <br>
     <input type="password" placeholder="password">
