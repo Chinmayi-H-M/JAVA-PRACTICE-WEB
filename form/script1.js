@@ -24,5 +24,9 @@ setInterval(function(){
         progress.style.width=`${c}%`;
         percentText.textContent=`${c}%`;
     }
+    else {
+        document.querySelector("h3").textContent = "Downloaded";
+        clearInterval(interval); // stop the timer
+    }
 },(seconds*1000)/100);
 
