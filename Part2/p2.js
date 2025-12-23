@@ -1,10 +1,4 @@
-const users=[
-    {
-        name:"Sharan",
-        pic:"https://images.unsplash.com/photo-1761839257870-06874bda71b5?q=80&w=1169&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-        bio:"Humble guy"
-    },
-    const users = [
+const users = [
   {
     name: "Sharan",
     pic: "https://images.unsplash.com/photo-1761839257870-06874bda71b5?q=80&w=1169&auto=format&fit=crop",
@@ -57,4 +51,41 @@ const users=[
   }
 ];
 
-]
+function showUsers(arr){
+arr.forEach(function (user){
+  const card = document.createElement("div");
+  card.classList.add("card");
+
+  // image
+  const img = document.createElement("img");
+  img.src = user.pic;
+  img.classList.add("bg-img");
+
+  const blurredLayer=document.createElement("div");
+  blurredLayer.style.backgroundColor = user.pic;
+  blurredLayer.classList.add("blurred-layer");
+
+  const content = document.createElement("div");
+  content.classList.add("content");
+
+  // name
+  const name = document.createElement("h3");
+  name.textContent = user.name;
+
+  // bio
+  const bio = document.createElement("p");
+  bio.textContent = user.bio;
+
+  content.appendChild(heading);
+  content.appendChild(para);
+
+  // append inside card
+  card.appendChild(img);
+  card.appendChild(name);
+  card.appendChild(bio);
+
+  // append card to main
+  document.querySelector(".cards").appendChild(card);
+});
+}
+showUsers(users);
