@@ -84,10 +84,19 @@ content.appendChild(bio);
   card.appendChild(img);
   card.appendChild(blurredLayer);
 card.appendChild(content);
-
   document.querySelector(".cards").appendChild(card);
 });
 }
 showUsers(users);
+
+let inp = document.querySelector(".inp");
+inp.addEventListener("input",function(){
+  let newUser= users.filter((user) =>{
+    let value = inp.value.toLowerCase().trim();
+    return user.name.toLowerCase().startsWith(value);
+  })
+  document.querySelector(".cards").innerHTML="";
+  showUsers(newUser);
+})
 
 
