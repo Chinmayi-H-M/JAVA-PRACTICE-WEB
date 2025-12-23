@@ -62,7 +62,7 @@ arr.forEach(function (user){
   img.classList.add("bg-img");
 
   const blurredLayer=document.createElement("div");
-  blurredLayer.style.backgroundColor = user.pic;
+  blurredLayer.style.backgroundImage = `url(${user.pic})`;
   blurredLayer.classList.add("blurred-layer");
 
   const content = document.createElement("div");
@@ -75,17 +75,19 @@ arr.forEach(function (user){
   // bio
   const bio = document.createElement("p");
   bio.textContent = user.bio;
+   
+  content.appendChild(name);
+content.appendChild(bio);
 
-  content.appendChild(heading);
-  content.appendChild(para);
 
-  // append inside card
+
   card.appendChild(img);
-  card.appendChild(name);
-  card.appendChild(bio);
+  card.appendChild(blurredLayer);
+card.appendChild(content);
 
-  // append card to main
   document.querySelector(".cards").appendChild(card);
 });
 }
 showUsers(users);
+
+
