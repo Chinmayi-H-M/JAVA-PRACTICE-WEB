@@ -51,10 +51,12 @@
             border: 1px solid #ddd;
             outline: none;
         }
-        .form-container{
-            margin-top:20px;
+
+        .form-container {
+            margin-top: 20px;
             display: none;
         }
+
         /* Tags */
         .tags {
             display: flex;
@@ -178,11 +180,13 @@
         .side-actions button:hover {
             background: #333;
         }
-        .note-wrapper{
-            display:block;
+
+        .note-wrapper {
+            display: block;
         }
-        .close-btn{
-            display:block;required 
+
+        .close-btn {
+            display: block;
         }
     </style>
 </head>
@@ -194,30 +198,31 @@
             <button>↑</button>
             <button>↓</button>
         </div>
-    <div class="card note-container">
-        <div class="profile">
-            <img src="https://via.placeholder.com/40" />
-            <div>
-                <h4>Fatima Uma</h4>
-                <p>Home town <span>Singapore</span></p>
+        <div class="card note-container">
+            <div class="profile">
+                <img src="https://via.placeholder.com/40" />
+                <div>
+                    <h4>Fatima Uma</h4>
+                    <p>Home town <span>Singapore</span></p>
+                </div>
+            </div>
+
+            <p class="booking">Bookings <span>3 times</span></p>
+
+            <div class="actions">
+                <button class="btn dark">Call</button>
+                <button class="btn light">Message</button>
             </div>
         </div>
-
-        <p class="booking">Bookings <span>3 times</span></p>
-
-        <div class="actions">
-            <button class="btn dark">Call</button>
-            <button class="btn light">Message</button>
-        </div>
-    </div>
     </div>
 
 
     </div>
 
 
-        <div class="card form-container">
-            <h3>New Call</h3>
+    <div class="card form-container">
+        <h3>New Call</h3>
+        <form>
 
             <label>Image URL</label>
             <input required placeholder="https://example.com/photo.jpg" />
@@ -232,40 +237,33 @@
             <input required placeholder="e.g. Quick appointment note" />
             <label class="form-label">Category</label>
 
-<div class="d-flex gap-2 flex-wrap">
+            <label class="form-label">Category</label>
 
-  <input type="radio" class="btn-check" name="category" id="emergency">
-  <label class="btn btn-outline-danger btn-sm rounded-pill" for="emergency">
-    Emergency
-  </label>
+            <div class="btn-group w-100" role="group" aria-label="Category">
 
-  <input type="radio" class="btn-check" name="category" id="important">
-  <label class="btn btn-outline-warning btn-sm rounded-pill" for="important">
-    Important
-  </label>
+                <input type="radio" name="category" id="emergency" autocomplete="off">
+                <label class="btn btn-danger" for="emergency">Emergency</label>
 
-  <input type="radio" class="btn-check" name="category" id="urgent">
-  <label class="btn btn-outline-primary btn-sm rounded-pill" for="urgent">
-    Urgent
-  </label>
+                <input type="radio" name="category" id="important" autocomplete="off">
+                <label class="btn btn-warning" for="important">Important</label>
 
-  <input type="radio" class="btn-check" name="category" id="norush" checked>
-  <label class="btn btn-outline-success btn-sm rounded-pill" for="norush">
-    No Rush
-  </label>
+                <input type="radio" name="category" id="urgent" autocomplete="off">
+                <label class="btn btn-primary" for="urgent">Urgent</label>
 
-</div>
+                <input type="radio" name="category" id="norush" autocomplete="off">
+                <label class="btn btn-secondary" for="norush">No Rush</label>
 
+            </div>
 
-            
 
             <button class="btn dark">Create Note</button>
-            <button id="close-btn" class="btn danger">Close</button>
-        </div>
+        </form>
+        <button id="close-btn" class="btn danger">Close</button>
+    </div>
 
 
-     <script src="p3.js"></script>
-     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="p3.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 
