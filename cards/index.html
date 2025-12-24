@@ -4,6 +4,146 @@
   <meta charset="UTF-8" />
   <title>Note Card UI</title>
   <link rel="stylesheet" href="style.css" />
+  <style>
+    * {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f4f4f4;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.container {
+  position: relative;
+}
+
+/* Card */
+.card {
+  width: 320px;
+  background: white;
+  border-radius: 18px;
+  padding: 20px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+}
+
+/* Headings */
+.card h3 {
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+/* Labels & Inputs */
+label {
+  font-size: 12px;
+  color: #555;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  margin: 6px 0 14px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  outline: none;
+}
+
+/* Tags */
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.tag {
+  padding: 6px 10px;
+  font-size: 12px;
+  border-radius: 20px;
+  border: 1px solid #ddd;
+  cursor: default;
+}
+
+.emergency {
+  border-color: #ff4d4d;
+  color: #ff4d4d;
+}
+
+.important {
+  border-color: #ff9900;
+  color: #ff9900;
+}
+
+.urgent {
+  border-color: #7a5cff;
+  color: #7a5cff;
+}
+
+/* Buttons */
+.btn {
+  width: 100%;
+  padding: 12px;
+  border-radius: 14px;
+  border: none;
+  font-size: 14px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.dark {
+  background: #000;
+  color: #fff;
+}
+
+.danger {
+  background: #ff4d4d;
+  color: #fff;
+}
+
+.light {
+  background: #f1f1f1;
+}
+
+/* Note Card */
+.profile {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.profile img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.profile h4 {
+  margin: 0;
+}
+
+.profile p {
+  margin: 0;
+  font-size: 12px;
+  color: #666;
+}
+
+.booking {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0;
+  font-size: 14px;
+}
+
+.actions {
+  display: flex;
+  gap: 10px;
+}
+  </style>
 </head>
 <body>
     <div class="card note-container">
