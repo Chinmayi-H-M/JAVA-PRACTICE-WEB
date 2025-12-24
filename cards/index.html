@@ -1,204 +1,247 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <title>Note Card UI</title>
-  <link rel="stylesheet" href="style.css" />
-  <style>
-    * {
-  box-sizing: border-box;
-}
+    <meta charset="UTF-8" />
+    <title>Note Card UI</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+        * {
+            box-sizing: border-box;
+        }
 
-body {
-  margin: 0;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: #f4f4f4;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-}
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #f4f4f4;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+        }
 
-.container {
-display:none;
-  position: relative;
-}
+        .container {
+            display: none;
+            position: relative;
+        }
 
-/* Card */
-.card {
-  width: 320px;
-  background: white;
-  border-radius: 18px;
-  padding: 20px;
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
-}
+        /* Card */
+        .card {
+            width: 320px;
+            background: white;
+            border-radius: 18px;
+            padding: 20px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+        }
 
-/* Headings */
-.card h3 {
-  margin-top: 0;
-  margin-bottom: 16px;
-}
+        /* Headings */
+        .card h3 {
+            margin-top: 0;
+            margin-bottom: 16px;
+        }
 
-/* Labels & Inputs */
-label {
-  font-size: 12px;
-  color: #555;
-}
+        /* Labels & Inputs */
+        label {
+            font-size: 12px;
+            color: #555;
+        }
 
-input {
-  width: 100%;
-  padding: 10px;
-  margin: 6px 0 14px;
-  border-radius: 10px;
-  border: 1px solid #ddd;
-  outline: none;
-}
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 6px 0 14px;
+            border-radius: 10px;
+            border: 1px solid #ddd;
+            outline: none;
+        }
 
-/* Tags */
-.tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  margin-bottom: 16px;
-}
+        /* Tags */
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 16px;
+        }
 
-.tag {
-  padding: 6px 10px;
-  font-size: 12px;
-  border-radius: 20px;
-  border: 1px solid #ddd;
-  cursor: default;
-}
+        .tag {
+            padding: 6px 10px;
+            font-size: 12px;
+            border-radius: 20px;
+            border: 1px solid #ddd;
+            cursor: default;
+        }
 
-.emergency {
-  border-color: #ff4d4d;
-  color: #ff4d4d;
-}
+        .emergency {
+            border-color: #ff4d4d;
+            color: #ff4d4d;
+        }
 
-.important {
-  border-color: #ff9900;
-  color: #ff9900;
-}
+        .important {
+            border-color: #ff9900;
+            color: #ff9900;
+        }
 
-.urgent {
-  border-color: #7a5cff;
-  color: #7a5cff;
-}
+        .urgent {
+            border-color: #7a5cff;
+            color: #7a5cff;
+        }
 
-/* Buttons */
-.btn {
-  width: 100%;
-  padding: 12px;
-  border-radius: 14px;
-  border: none;
-  font-size: 14px;
-  cursor: pointer;
-  margin-top: 10px;
-}
+        /* Buttons */
+        .btn {
+            width: 100%;
+            padding: 12px;
+            border-radius: 14px;
+            border: none;
+            font-size: 14px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
 
-.dark {
-  background: #000;
-  color: #fff;
-}
+        .dark {
+            background: #000;
+            color: #fff;
+        }
 
-.danger {
-  background: #ff4d4d;
-  color: #fff;
-}
+        .danger {
+            background: #ff4d4d;
+            color: #fff;
+        }
 
-.light {
-  background: #f1f1f1;
-}
+        .light {
+            background: #f1f1f1;
+        }
 
-/* Note Card */
-.profile {
-  display: flex;
-  gap: 10px;
-  align-items: center;
-}
+        /* Note Card */
+        .profile {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
 
-.profile img {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-}
+        .profile img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+        }
 
-.profile h4 {
-  margin: 0;
-}
+        .profile h4 {
+            margin: 0;
+        }
 
-.profile p {
-  margin: 0;
-  font-size: 12px;
-  color: #666;
-}
+        .profile p {
+            margin: 0;
+            font-size: 12px;
+            color: #666;
+        }
 
-.booking {
-  display: flex;
-  justify-content: space-between;
-  margin: 20px 0;
-  font-size: 14px;
-}
+        .booking {
+            display: flex;
+            justify-content: space-between;
+            margin: 20px 0;
+            font-size: 14px;
+        }
 
-.actions {
-  display: flex;
-  gap: 10px;
-}
-  </style>
+        .actions {
+            display: flex;
+            gap: 10px;
+        }
+
+        .note-wrapper {
+            position: relative;
+            display: flex;
+            align-items: center;
+        }
+
+        /* Left buttons container */
+        .side-actions {
+            position: absolute;
+            left: -50px;
+            /* controls distance from card */
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        /* Buttons style */
+        .side-actions button {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            border: none;
+            background: #000;
+            color: #fff;
+            font-size: 18px;
+            cursor: pointer;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+        }
+
+        .side-actions button:hover {
+            background: #333;
+        }
+    </style>
 </head>
+
 <body>
-    <div class="card note-container">
-      <div class="profile">
-        <img src="https://via.placeholder.com/40" />
-        <div>
-          <h4>Fatima Uma</h4>
-          <p>Home town <span>Singapore</span></p>
+    <div class="note-wrapper">
+        <div class="side-actions">
+            <button>+</button>
+            <button>↑</button>
+            <button>↓</button>
         </div>
-      </div>
-
-      <p class="booking">Bookings <span>3 times</span></p>
-
-      <div class="actions">
-        <button class="btn dark">Call</button>
-        <button class="btn light">Message</button>
-      </div>
     </div>
-    
+    <div class="card note-container">
+        <div class="profile">
+            <img src="https://via.placeholder.com/40" />
+            <div>
+                <h4>Fatima Uma</h4>
+                <p>Home town <span>Singapore</span></p>
+            </div>
+        </div>
 
-  </div>
+        <p class="booking">Bookings <span>3 times</span></p>
 
-
-  <div class="container">
-
-    <!-- NEW CALL FORM (Second Image) -->
-    <div class="card form-container">
-      <h3>New Call</h3>
-
-      <label>Image URL</label>
-      <input placeholder="https://example.com/photo.jpg" />
-
-      <label>Full Name</label>
-      <input placeholder="Enter full name" />
-
-      <label>Home Town</label>
-      <input placeholder="Enter home town" />
-
-      <label>Purpose</label>
-      <input placeholder="e.g. Quick appointment note" />
-
-      <label>Category</label>
-      <div class="tags">
-        <span class="tag emergency">Emergency</span>
-        <span class="tag important">Important</span>
-        <span class="tag urgent">Urgent</span>
-        <span class="tag">No Rush</span>
-      </div>
-
-      <button class="btn dark">Create Note</button>
-      <button class="btn danger">Close</button>
+        <div class="actions">
+            <button class="btn dark">Call</button>
+            <button class="btn light">Message</button>
+        </div>
     </div>
 
 
-    
+    </div>
+
+
+    <div class="container">
+
+        <!-- NEW CALL FORM (Second Image) -->
+        <div class="card form-container">
+            <h3>New Call</h3>
+
+            <label>Image URL</label>
+            <input placeholder="https://example.com/photo.jpg" />
+
+            <label>Full Name</label>
+            <input placeholder="Enter full name" />
+
+            <label>Home Town</label>
+            <input placeholder="Enter home town" />
+
+            <label>Purpose</label>
+            <input placeholder="e.g. Quick appointment note" />
+
+            <label>Category</label>
+            <div class="tags">
+                <span class="tag emergency">Emergency</span>
+                <span class="tag important">Important</span>
+                <span class="tag urgent">Urgent</span>
+                <span class="tag">No Rush</span>
+            </div>
+
+            <button class="btn dark">Create Note</button>
+            <button class="btn danger">Close</button>
+        </div>
+
+
+
 </body>
+
 </html>
