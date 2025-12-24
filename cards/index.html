@@ -1,21 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <title>Note Card UI</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <div class="form-contanier">
-
-    </div>
-    <div class="note-container">
-        <div class="left-icons">
-            <button id="add-note-btn"><i class="ri-add-line"></i></button>
-            <button id="add-note-btn"><i class="ri-arrow-up-line"></i></button>
-            <button id="add-note-btn"><i class="ri-arrow-down-line"></i></button>
+    <div class="card note-container">
+      <div class="profile">
+        <img src="https://via.placeholder.com/40" />
+        <div>
+          <h4>Fatima Uma</h4>
+          <p>Home town <span>Singapore</span></p>
         </div>
+      </div>
+
+      <p class="booking">Bookings <span>3 times</span></p>
+
+      <div class="actions">
+        <button class="btn dark">Call</button>
+        <button class="btn light">Message</button>
+      </div>
     </div>
-    <script src="p3.js"></script>
+    
+
+  </div>
+
+
+  <div class="container">
+
+    <!-- NEW CALL FORM (Second Image) -->
+    <div class="card form-container">
+      <h3>New Call</h3>
+
+      <label>Image URL</label>
+      <input placeholder="https://example.com/photo.jpg" />
+
+      <label>Full Name</label>
+      <input placeholder="Enter full name" />
+
+      <label>Home Town</label>
+      <input placeholder="Enter home town" />
+
+      <label>Purpose</label>
+      <input placeholder="e.g. Quick appointment note" />
+
+      <label>Category</label>
+      <div class="tags">
+        <span class="tag emergency">Emergency</span>
+        <span class="tag important">Important</span>
+        <span class="tag urgent">Urgent</span>
+        <span class="tag">No Rush</span>
+      </div>
+
+      <button class="btn dark">Create Note</button>
+      <button class="btn danger">Close</button>
+    </div>
+
+
+    
 </body>
 </html>
