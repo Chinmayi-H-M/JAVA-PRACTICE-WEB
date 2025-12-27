@@ -15,4 +15,14 @@ function abcd(){
         console.log(a);
     }
 }
-//dynamic scoping-
+//dynamic scoping- 
+let a = 12;
+function abcd(){
+    console.log(a);
+}
+function defg(){
+    let a =10;
+    abcd();
+}
+defg(); //output -12
+//If the js was dynamically scoped then the output would be printed as 10 but when it calls for abcd function it checks for the variable a inside function if it doesnt found then it looks in global but not in defg
