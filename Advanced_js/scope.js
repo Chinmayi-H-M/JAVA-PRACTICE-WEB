@@ -26,3 +26,14 @@ function defg(){
 }
 defg(); //output -12
 //If the js was dynamically scoped then the output would be printed as 10 but when it calls for abcd function it checks for the variable a inside function if it doesnt found then it looks in global but not in defg
+
+
+
+//Closure - if the child fumnction is able to access the parent function variable even after the parent function has been executed then this feature is called closure
+function parent(){
+    let a =10;
+    function child(){
+        console.log(a);
+    }
+    return child;
+}
