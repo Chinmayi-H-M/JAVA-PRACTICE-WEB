@@ -55,3 +55,20 @@ fnc2();
 fnc2();
 fnc2();
 fnc2();
+
+function clickLimiter(){
+    let click=0;
+    return function(){
+        if(click<5){
+            click++;
+            console.log(`clicked: ${click} times`);
+        }
+        else{
+            console.log("Click limit exceeded try after sometime");
+        }
+    }
+}
+let fnc1=clickLimiter();
+fnc1();
+fnc1();
+fnc1();
