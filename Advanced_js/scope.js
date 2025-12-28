@@ -44,4 +44,14 @@ function countForMe(){
         console.log(c);
     }
 }
-countForMe();
+let fnc=countForMe();
+fnc();
+fnc();
+fnc();
+
+let fnc2=countForMe();
+fnc2();
+fnc2();
+fnc2();
+fnc2();
+fnc2();
