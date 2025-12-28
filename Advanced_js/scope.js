@@ -72,3 +72,11 @@ let fnc1=clickLimiter();
 fnc1();
 fnc1();
 fnc1();
+
+
+
+function createToaster(config){
+    return function(){
+        
+    }
+}
