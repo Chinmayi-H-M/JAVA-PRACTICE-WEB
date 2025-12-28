@@ -77,12 +77,19 @@ fnc1();
 
 function createToaster(config){
     return function(notification){
-        let div =document.createElement("div")
+        let div =document.createElement("div");
+        div.className= `fixed ${config.theme==="dark" ? "bg-gray-800 text-white" : "bg-gray-200 text-black"} px-6 py-3 rounded shadow-lg pointer-events-none
+        ${config.positionX==="right" ? "right-5" : "left-5"}`;
+        div.innerHTML=notification;
+        document.body.appendChild(div);
+        setTimeout(()=>{
+            document.body.removeChild(div);
+        },config.duration*1000);
     }
 }
 
 let toaster = createToaster({
-    positionX:"right",
+    positionX:"left",
     positionY:"top",
     theme:"dark",
     duration:3,
