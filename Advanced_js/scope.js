@@ -32,8 +32,16 @@ defg(); //output -12
 //Closure - if the child fumnction is able to access the parent function variable even after the parent function has been executed then this feature is called closure
 function parent(){
     let a =10;
-    function child(){
+    return function child(){
         console.log(a);
     }
-    return child;
 }
+
+function countForMe(){
+    let c=0;
+    return function(){
+        c++;
+        console.log(c);
+    }
+}
+countForMe();
