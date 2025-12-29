@@ -6,7 +6,11 @@ let form = document.querySelector("form");
     },
     submitForm: function(e){
             e.preventDefault();
-            console.log("Form submitted");
+            this.users.push({
+                username:username.value,
+                role:role.value,
+                bio:bio.value,
+            });
     },
     addUser: function(){},
     removeUser: function() {},
