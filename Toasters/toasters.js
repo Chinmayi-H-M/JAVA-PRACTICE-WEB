@@ -27,4 +27,22 @@ setTimeout(() => {
 }, 2000);
 
 
+//THIS KEYWORD FUNCTIONALITIES
+//globalscope
+console.log(this);
+ //Inside function 
+ function abcd(){
+    console.log(this);
+ }
+ abcd();
+
+
+ let obj = {
+    name:"chinmayi",
+    sayName: function(){
+        console.log(this) //the function present inside the object this will be called as method
+    }
+ }
+
+
 
