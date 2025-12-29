@@ -36,13 +36,23 @@ console.log(this);
  }
  abcd();
 
-
+//Inside method
  let obj = {
     name:"chinmayi",
+    age:20,
     sayName: function(){
-        console.log(this) //the function present inside the object this will be called as method
-    }
+        console.log(this.age) //the function present inside the object this will be called as method
+    }//if we only use this keyword then it will print the whole object
  }
+ obj.sayName();
+
+ //Event Handler
+ document.querySelector("h1").addEventListener("click",function(){
+    alert();
+    console.log(this.style.color = "red");
+ });
+
+ 
 
 
 
