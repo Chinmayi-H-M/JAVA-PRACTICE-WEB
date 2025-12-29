@@ -18,4 +18,7 @@ let toaster=createToaster({
     duration:3000,
 });
 toaster("Download done!!");
+setTimeout(() => {
+    toaster("Chinmai accepted the request");
+}, 2000);
 
