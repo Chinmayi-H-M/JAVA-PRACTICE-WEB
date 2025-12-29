@@ -64,6 +64,27 @@ console.log(this);
     console.log(this.style.color = "red");
  });
 
+ //bind,call,apply
+
+ let obj1={
+    name:"Chidu",
+    age:26,
+ };
+ function abcd(){
+    console.log(this.age);
+ }
+ abcd.call(obj);
+ //if we want pass the parameters 
+
+ let obj2={
+    name:"Chinmayi",
+    age:20,
+ }
+ function job(a,b,c){
+    console.log(this,a,b,c);
+ }
+ job.call(obj2,2,4,5);
+
 
 
 
