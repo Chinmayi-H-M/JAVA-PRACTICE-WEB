@@ -43,8 +43,20 @@ console.log(this);
     sayName: function(){
         console.log(this.age) //the function present inside the object this will be called as method
     }//if we only use this keyword then it will print the whole object
+    //In this if we use the arrow function then it will shown as window not the object
  }
  obj.sayName();
+
+ /*global-window
+ function-window
+ method with es5 fnc- object
+ method with es6 arrow fnc-window
+ es5 function inside method -window
+ arrow function inside method -window
+ arrow function inside es5 method - object
+ event handler -element
+ class - blank object
+ */
 
  //Event Handler
  document.querySelector("h1").addEventListener("click",function(){
@@ -52,7 +64,7 @@ console.log(this);
     console.log(this.style.color = "red");
  });
 
- 
+
 
 
 
