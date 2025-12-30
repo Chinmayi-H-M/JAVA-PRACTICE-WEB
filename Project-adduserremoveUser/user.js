@@ -10,6 +10,7 @@ let form = document.querySelector("form");
                 username:username.value,
                 role:role.value,
                 bio:bio.value,
+                photo:photo.value,
             });
     },
     addUser: function(){},
