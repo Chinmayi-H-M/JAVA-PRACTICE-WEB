@@ -12,6 +12,8 @@ let form = document.querySelector("form");
                 bio:bio.value,
                 photo:photo.value,
             });
+
+            form.reset();
     },
     addUser: function(){},
     removeUser: function() {},
