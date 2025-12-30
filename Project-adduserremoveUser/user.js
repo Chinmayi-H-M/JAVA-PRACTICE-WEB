@@ -25,6 +25,7 @@ const userManager = {
 
     },
     renderUi: function () {
+        document.querySelector(".users").innerHTML = "";
         this.users.forEach(function (user) {
 
             const card = document.createElement("div");
@@ -52,14 +53,24 @@ const userManager = {
             bio.className = "text-xs text-gray-400 mt-2";
             bio.textContent = user.bio;
 
+            const btn = document.createElement("button");
+            btn.className = "mt-4 px-4 py-2 bg-blue-600 hover:bg-red-700 rounded-lg text-sm";
+            btn.textContent = "Remove User";
+            btn.addEventListener("click", () => {
+                userManager.removeUser(user);
+            });
 
-            card.append(img, name, role, bio);
-            document.querySelector(".users").innerHTML ="";
+
+            card.append(img, name, role, bio, btn);
+
             document.querySelector(".users").appendChild(card);
         }
         );
     },
-    removeUser: function () { },
+    removeUser: function (user) {
+        this.users = this.users.filter(u => u !== user);
+        this.renderUi();
+    },
 };
 userManager.init();
 console.log(userManager.users);
