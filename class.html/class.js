@@ -52,3 +52,18 @@ class Admin extends User{
 let u1 = new User("Chidu","Hyd","Chidu@123","chidu@gmail.com")
 let a1 = new Admin("Chinmayi","Mandya","hmschinmayi","hmschinmayi.com")
 let u2 = new User("Rahul","Bangalore","rahul123","rahul@gmail.com")
+
+
+//prototypal inheritance and classical inheritance
+
+let coffee ={
+    color: "dark",
+    drink: function(){
+        console.log("Drinking "+this.color+" coffee");
+    }
+
+}
+
+let arabiataCoffee = Object.create(coffee);
+arabiataCoffee.strength = "Strong";
+console.log(arabiataCoffee.drink());
