@@ -80,3 +80,16 @@ function sysncFunction(){
 for(let val=1; val<=10; val++){
     sysncFunction();
 }
+
+function profileFetch(username,cb){
+    setTimeout(() => {
+        cb({_id:12122, username,age:26,email:huihui.com});
+    }, 2000);
+}
+
+function FetchPosts(id,cb){
+    setTimeout(() => {
+        cb([{title:"Post 1",content:"Content 1"},{title:"Post 2",content:"Content 2"}]);
+    }, 3000);
+}
+
