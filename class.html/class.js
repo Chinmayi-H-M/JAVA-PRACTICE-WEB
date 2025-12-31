@@ -93,3 +93,9 @@ function FetchPosts(id,cb){
     }, 3000);
 }
 
+profileFetch("chinmayi",function(data){
+    console.log(data);
+    FetchPosts(data._id,function(posts){
+        console.log(posts);
+    })
+})
