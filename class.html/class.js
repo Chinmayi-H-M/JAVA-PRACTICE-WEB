@@ -106,4 +106,7 @@ profileFetch("chinmayi",function(data){
     FetchPosts(data._id,function(posts){
         console.log(posts);
     })
+    FetchSavedPosts(data._id,function(savedPosts){
+        console.log(savedPosts);
+    })
 })
