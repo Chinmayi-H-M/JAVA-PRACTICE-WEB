@@ -95,7 +95,10 @@ function FetchPosts(id,cb){
 
 function FetchSavedPosts(id,cb){
     console.log("Fetching saved posts....");
-    
+    setTimeout(() => {
+        cb({_id:id, saved:[1,2,3,4,5]});
+        
+    }, 3000);
 }
 
 profileFetch("chinmayi",function(data){
