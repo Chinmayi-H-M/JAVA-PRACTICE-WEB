@@ -67,3 +67,16 @@ let coffee ={
 let arabiataCoffee = Object.create(coffee);
 arabiataCoffee.strength = "Strong";
 console.log(arabiataCoffee.drink());
+
+
+//Sync and Async in JS
+
+function sysncFunction(){
+    setTimeout(() => {
+        console.log(val);
+
+    },Math.floor(Math.random()*10));
+}
+for(let val=1; val<=10; val++){
+    sysncFunction();
+}
