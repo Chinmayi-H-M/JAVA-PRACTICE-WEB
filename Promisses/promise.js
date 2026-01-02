@@ -6,8 +6,17 @@ let pr = new Promise(function(res,rej){
     }, 3000);
 })
 
-pr.then(function (val){
-    console.log(val);
-}).catch(function(val){
-    console.log(val);
-})
+// pr.then(function (val){
+//     console.log(val);
+// }).catch(function(val){
+//     console.log(val);
+// })
+async function abcd(){
+    try{
+        let val = await pr;
+        console.log(val);
+    }catch(err){
+        console.log(err);
+    }
+}
+abcd();
