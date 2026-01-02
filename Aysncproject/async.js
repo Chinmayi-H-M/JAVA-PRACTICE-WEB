@@ -3,10 +3,10 @@ fetch("https://randomuser.me/api/?results=3")
     .then((data) => {
         data.results.forEach((function (user) {
             // parent container
-            const app = document.getElementById("app");
+            const app = document.createElement("div");
             app.className = "bg-gray-800 rounded-lg p-6 max-w-sm w-full";
 
-            // card
+
             const card = document.createElement("div");
             card.className =
                 "flex items-center space-x-4";
@@ -14,6 +14,7 @@ fetch("https://randomuser.me/api/?results=3")
             // avatar
             const avatar = document.createElement("img");
             avatar.className = "w-14 h-14 rounded-full";
+            avatar.src=user.picture.large;
             avatar.alt = "User Photo";
 
             // info wrapper
@@ -44,7 +45,7 @@ fetch("https://randomuser.me/api/?results=3")
 
             // append card to app
             app.appendChild(card);
-
-        }))
+            document.querySelector(".cards").appendChild(app);
+        }));
 
     })
