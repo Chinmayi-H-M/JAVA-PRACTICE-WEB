@@ -1,16 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Async Users</title>
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-    <div class="cards min-h-screen flex items-center justify-center bg-gray-100">
+<body class="bg-gray-100">
+
+  <!-- Page wrapper -->
+  <div class="min-h-screen flex flex-col items-center py-10 gap-8">
+
+    <!-- Cards container -->
+    <div class="cards w-full flex justify-center"></div>
+
+    <!-- Refresh button (AFTER cards) -->
+    <button
+      id="refreshBtn"
+      class="px-10 py-4 text-lg font-semibold text-white bg-indigo-600 rounded-xl shadow-lg
+             hover:bg-indigo-700 active:scale-95 transition"
+    >
+      🔄 Refresh Users
+    </button>
 
   </div>
 
-    <script src="async.js"></script>
+  <script src="async.js"></script>
 </body>
 </html>

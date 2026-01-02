@@ -1,10 +1,11 @@
+function getUsers(){
 fetch("https://randomuser.me/api/?results=3")
     .then(raw => raw.json())
     .then((data) => {
         data.results.forEach((function (user) {
             // parent container
             const app = document.createElement("div");
-            app.className = "bg-gray-800 rounded-lg p-6 max-w-sm w-full";
+            app.className = "rounded-lg p-6 max-w-sm w-full";
 
 
             const card = document.createElement("div");
@@ -23,10 +24,12 @@ fetch("https://randomuser.me/api/?results=3")
             // name
             const name = document.createElement("h3");
             name.className = "text-sm font-semibold text-gray-900";
+            name.textContent = user.name.first+" "+user.name.last;
 
             // email
             const email = document.createElement("p");
             email.className = "text-xs text-gray-500";
+            email.textContent = user.email;
 
             // status
             const status = document.createElement("span");
@@ -49,3 +52,10 @@ fetch("https://randomuser.me/api/?results=3")
         }));
 
     })
+}
+getUsers();
+
+let button = document.getElementById("refreshBtn").addEventListener("click", function(){
+    getUsers();
+})
+
