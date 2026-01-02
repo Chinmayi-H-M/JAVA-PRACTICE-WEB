@@ -1,33 +1,33 @@
-let pr = new Promise(function(res,rej){
-    setTimeout(() => {
-        let rn = Math.floor(Math.random()*10);
-        if(rn>5) res(rn);
-        else rej(rn);
-    }, 3000);
-})
+// let pr = new Promise(function(res,rej){
+//     setTimeout(() => {
+//         let rn = Math.floor(Math.random()*10);
+//         if(rn>5) res(rn);
+//         else rej(rn);
+//     }, 3000);
+// })
 
 // pr.then(function (val){
 //     console.log(val);
 // }).catch(function(val){
 //     console.log(val);
 // })
-async function abcd(){
-    try{
-        let val = await pr;
-        console.log(val);
-    }catch(err){
-        console.log(err);
-    }
-}
-abcd();
+// async function abcd(){
+//     try{
+//         let val = await pr;
+//         console.log(val);
+//     }catch(err){
+//         console.log(err);
+//     }
+// }
+// abcd();
 
 
 fetch("https://randomuser.me/api/").then((rawdata)=>
 {
-    rawdata.json();
-    return rawdata.json();})
-.then((rawdata)=>{
-    console.log(rawdata);
+    return rawdata.json();
+})
+.then((data)=>{
+    console.log(data.results[0].name.first);
 })
 .catch((err) => {
     console.log(err);
