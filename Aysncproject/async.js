@@ -1,3 +1,50 @@
 fetch("https://randomuser.me/api/?results=3")
-.then(raw => raw.json())
-.then((data) => console.log(data.res))
+    .then(raw => raw.json())
+    .then((data) => {
+        data.results.forEach((function (user) {
+            // parent container
+            const app = document.getElementById("app");
+            app.className = "bg-gray-800 rounded-lg p-6 max-w-sm w-full";
+
+            // card
+            const card = document.createElement("div");
+            card.className =
+                "flex items-center space-x-4";
+
+            // avatar
+            const avatar = document.createElement("img");
+            avatar.className = "w-14 h-14 rounded-full";
+            avatar.alt = "User Photo";
+
+            // info wrapper
+            const info = document.createElement("div");
+
+            // name
+            const name = document.createElement("h3");
+            name.className = "text-sm font-semibold text-gray-900";
+
+            // email
+            const email = document.createElement("p");
+            email.className = "text-xs text-gray-500";
+
+            // status
+            const status = document.createElement("span");
+            status.className =
+                "inline-block mt-1 text-xs text-white bg-indigo-600 px-3 py-0.5 rounded-full";
+            status.textContent = "Active";
+
+            // append text elements
+            info.appendChild(name);
+            info.appendChild(email);
+            info.appendChild(status);
+
+            // append avatar + info to card
+            card.appendChild(avatar);
+            card.appendChild(info);
+
+            // append card to app
+            app.appendChild(card);
+
+        }))
+
+    })
