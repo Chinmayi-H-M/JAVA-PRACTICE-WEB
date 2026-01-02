@@ -20,3 +20,15 @@ async function abcd(){
     }
 }
 abcd();
+
+
+fetch("https://randomuser.me/api/").then((rawdata)=>
+{
+    rawdata.json();
+    return rawdata.json();})
+.then((rawdata)=>{
+    console.log(rawdata);
+})
+.catch((err) => {
+    console.log(err);
+})
