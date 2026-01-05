@@ -69,3 +69,17 @@ function createProduct(name, price){
 }
 let iphone = createProduct("iphone", 7000);
 iphone.buy(23);
+
+
+
+class YoutubeChannel{
+    constructor(){
+        this.subscribers = [];
+    }
+    subscribe(user){}
+    unsubscribe(user){}
+    notify(){}
+}
+class User{
+    constructor
+}
