@@ -16,4 +16,9 @@ let Bank = (function(){
             console.log(bankBalnce);
         }
     }
+    return {
+        checkBalance,
+        setBalance,
+        withdraw,
+    },
 })();
