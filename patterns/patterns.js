@@ -81,7 +81,8 @@ class YoutubeChannel{
         user.update(`You have subscribed the channel.`)
     }
     unsubscribe(user){
-
+        this,this.subscribers.filter(sub);
+        user.update(`You have subscribed the channel.`);
     }
     notify(){}
 }
@@ -94,5 +95,7 @@ class User{
 
     }
 }
+let sheryians = new YoutubeChannel();
+let user1 = new User("Harsh");
 
-
+sheryians.subscribe(user1);
