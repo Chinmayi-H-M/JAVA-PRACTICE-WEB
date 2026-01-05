@@ -76,10 +76,23 @@ class YoutubeChannel{
     constructor(){
         this.subscribers = [];
     }
-    subscribe(user){}
-    unsubscribe(user){}
+    subscribe(user){
+        this.subscribers.push(user);
+        user.update(`You have subscribed the channel.`)
+    }
+    unsubscribe(user){
+
+    }
     notify(){}
 }
 class User{
-    constructor
+    constructor(name){
+        this.name = name;
+    }
+    update(data){
+        console.log(data);
+
+    }
 }
+
+
