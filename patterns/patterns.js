@@ -81,10 +81,12 @@ class YoutubeChannel{
         user.update(`You have subscribed the channel.`)
     }
     unsubscribe(user){
-        this,this.subscribers.filter(sub);
-        user.update(`You have subscribed the channel.`);
+        this.subscribers = this.subscribers.filter((sub) => sub !==user);
+        user.update(`${user.name}, You have un-subscribed the channel.`);
     }
-    notify(){}
+    notify(message){
+        this.subscribers.forEach(sub => sub.update(message));
+    }
 }
 class User{
     constructor(name){
