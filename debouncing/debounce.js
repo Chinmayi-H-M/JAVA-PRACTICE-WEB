@@ -7,6 +7,3 @@ function debounce(fnc,delay){
         },delay)   }
 
 }
-document.querySelector("input").addEventListener("input",debounce(function(){
-    console.log("hey");
-},1000));
