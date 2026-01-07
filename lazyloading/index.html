@@ -4,6 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lazy loading</title>
+    <style>
+        .spacer{
+            height:600px;
+        }
+        .lazy-img{
+            display:black;
+            width:100%;
+            height:auto;
+            margin:30% 0;
+            transition: opacity 0.5s ease;
+        
+        }
+        .lazy-img.loaded{
+            opacity:1;
+        }
+    </style>
 </head>
 <body><div class="cotainer">
     <p>Scroll down to see images load oly when they enter the viewport</p>
@@ -15,7 +31,7 @@
 
     <div class="spacer"></div>
     <img src="" alt="" class="lazy-gray">
-    
+
     <div class="spacer"></div>
     <img src="" alt="" class="lazy-gray">
 </div>
