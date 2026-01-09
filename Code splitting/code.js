@@ -54,3 +54,15 @@ btn1.addEventListener("click", function(){
     li.textContent = finalAdd();
     ul1.appendChild(li);
 })
+
+//custom map function
+function myMap(arr,callback){
+    let newarr=[];
+    for(let i=0;i<arr.length;i++){
+        newarr.push(callback(arr[t],i,arr));
+    }
+    return newarr;
+}
+ let ans = myMap(arr,function(val){
+    return val+2;
+ })
