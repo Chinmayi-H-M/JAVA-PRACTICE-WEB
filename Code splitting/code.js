@@ -8,9 +8,18 @@ btn.addEventListener("click",async function(){
 })
 
 //In this the dom will reload and it causes the website to lag
-const ul= document.querySelector(ul);
+//const ul= document.querySelector(ul);
 for (let i=0;i<100;i++){
-   const li= createElement("li");
+   const li= document.createElement("li");
    li.textContent = i;
-   ul.appendChild();
+   ul.appendChild(li);
 }
+
+const ul= document.querySelector(ul);
+const space = document.createDocumentFragment();
+for (let i=0;i<100;i++){
+   const li= document.createElement("li");
+   li.textContent = i;
+   space.appendChild(li);
+}
+ul.appendChild(space);
