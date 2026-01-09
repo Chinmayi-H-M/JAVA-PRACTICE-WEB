@@ -35,3 +35,22 @@ const int = setInterval(() => {
         console.log("Finished");
     }
 }, 500);
+
+
+
+const btn1= document.querySelector("#ulbtn");
+const ul1 = document.querySelector("#addul");
+function add(n1,n2){
+    return n1+n2;
+
+}
+btn1.addEventListener("click", function(){
+    const num1= Math.floor(Math.random() *10);
+    const num2= Math.floor(Math.random() *10);
+
+    let finalAdd = add(num1,num2);
+
+    let li = document.createElement("li");
+    li.textContent = finalAdd();
+    ul1.appendChild(li);
+})
