@@ -84,3 +84,8 @@ function myMap(arr,callback){
     console.log("c");
  }
  c();
+
+
+ //web apis - console,setTimeOut,setinterval these are all not a part of js these are all part of web 
+ //we run the js in browser so browser will provide us
+ 
